@@ -8,11 +8,11 @@ public:
     while(index<s.size()){
         if(mpp[s[index]]<mpp[s[index+1]]){
             sum-=mpp[s[index]];
-            index++;
+            
         }else{
             sum+=mpp[s[index]];
-            index++;
         }
+        index++;
     }
     return sum;
 
