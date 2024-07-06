@@ -8,7 +8,7 @@ public:
             if(mpp.find(remaing)!=mpp.end()){
                 return {mpp[remaing],i};
             }
-            mpp[firstDigit]=i;
+            mpp[nums[i]]=i;
         }
         return {-1,-1};
     }
