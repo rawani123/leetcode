@@ -12,7 +12,6 @@ public:
                     minpq.push(nums[i]);
                 }
             }
-
         }
         return minpq.top();
     }
