@@ -21,7 +21,6 @@ public:
                 rowIndex = i;
             }
         }
-
         return {rowIndex, maxOnes};
     }
 };
