@@ -6,17 +6,17 @@ public:
     }
     
     void push(int val) {
+        st.push(val); 
         if(s2.empty() || s2.top() >= val){
-            s2.push(val);
-        }
-        st.push(val);
+            s2.push(val);  
+        }  
     }
     
     void pop() {
         if(st.top()==s2.top()){
-            s2.pop();
+            s2.pop();  
         }
-        st.pop();
+        st.pop(); 
     }
     
     int top() {
@@ -25,7 +25,6 @@ public:
     
     int getMin() {
         return s2.top();
-        
     }
 };
 
