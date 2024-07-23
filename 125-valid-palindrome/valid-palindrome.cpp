@@ -1,21 +1,23 @@
 class Solution {
 public:
     bool isPalindrome(string s) {
+        // Remove non-alphanumeric characters and convert to lowercase
         string filtered;
-      for (int i = 0; i < s.size(); i++) {
-        if (isalnum(s[i])) {
-           filtered += tolower(s[i]);
+        for (char c : s) {
+            if (isalnum(c)) {
+                filtered += tolower(c);
+            }
         }
-    }  
-    
-    string fromStart;
-    for(auto c:filtered){
-        fromStart+=c;
-    }
-    string fromEnd;
-    for(int i=filtered.size()-1;i>=0;i--){
-        fromEnd+=filtered[i];
-    }
-    return (fromStart==fromEnd);
+        
+        // Check if the filtered string is a palindrome
+        int left = 0, right = filtered.size() - 1;
+        while (left < right) {
+            if (filtered[left] != filtered[right]) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
     }
 };
