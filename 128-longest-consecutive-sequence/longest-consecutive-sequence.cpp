@@ -7,16 +7,16 @@ public:
         for (int num : nums) {
            
             if (numSet.find(num - 1) == numSet.end()) {
-                int currentNum = num;
+                int currentNum = num;  
                 int currentStreak = 1;
 
                
                 while (numSet.find(currentNum + 1) != numSet.end()) {
-                    currentNum++;
+                    currentNum++; 
                     currentStreak++;
                 }
 
-                longestStreak = max(longestStreak, currentStreak);
+                longestStreak = max(longestStreak, currentStreak); 
             }
         }
 
