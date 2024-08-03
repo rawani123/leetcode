@@ -6,19 +6,16 @@ public:
         int maxArea = 0;
         
         while (i < j) {
-            int width = j - i;
-            int h = min(height[i], height[j]);
-            int area = width * h;
-            maxArea = max(maxArea, area);
-            
-            
+            int width = j - i; 
+            int h = min(height[i], height[j]); 
+            int area = width * h; 
+            maxArea = max(maxArea, area); 
             if (height[i] < height[j]) {
                 i++;
             } else {
                 j--;
             }
         }
-        
         return maxArea;
     }
 };
