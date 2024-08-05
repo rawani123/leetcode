@@ -1,3 +1,5 @@
+
+
 class Solution {
 public:
     string kthDistinct(vector<string>& arr, int k) {
@@ -16,7 +18,7 @@ public:
             }
         }
         
-        
+        // Step 3: Return the k-th distinct string if it exists
         if (k <= distinctStrings.size()) {
             return distinctStrings[k - 1];
         } else {
@@ -24,3 +26,4 @@ public:
         }
     }
 };
+
