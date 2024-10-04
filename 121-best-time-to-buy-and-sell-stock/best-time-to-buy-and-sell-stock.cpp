@@ -8,15 +8,10 @@ public:
     
     for (int price : prices) {
         
-        if (price < min_price) {
-            min_price = price;
-        }
+        min_price=min(min_price,price);
        
         int potential_profit = price - min_price;
-       
-        if (potential_profit > max_profit) {
-            max_profit = potential_profit;
-        }
+        max_profit=max(max_profit,potential_profit);
     }
 
     return max_profit;
