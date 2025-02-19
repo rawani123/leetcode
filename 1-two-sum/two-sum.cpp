@@ -1,15 +1,15 @@
 class Solution {
 public:
-    vector<int> twoSum(vector<int>& nums, int target) {
-        map<int,int> mpp;
-        for(int i=0;i<nums.size();i++){
-            int firstDigit=nums[i];
-            int remaing=target-firstDigit;
-            if(mpp.find(remaing)!=mpp.end()){
-                return {mpp[remaing],i};
+    vector<int> twoSum(vector<int> &nums, int target) {
+        unordered_map<int, int> hash;
+        for (int i = 0; i < nums.size(); ++i) {
+            int complement = target - nums[i];
+            if (hash.find(complement) != hash.end()) {
+                return {hash[complement], i};
             }
-            mpp[nums[i]]=i;
+            hash[nums[i]] = i;
         }
-        return {-1,-1};
+        // Return an empty vector if no solution is found
+        return {};
     }
 };
